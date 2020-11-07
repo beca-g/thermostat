@@ -1,26 +1,46 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Thermostat</title>
     <link rel="stylesheet" href="./style.css"> 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <style>
+      body {
+        background-image: url('clouds.jpg');
+      }
+      </style>
   </head>
-  <body>
-    <section>
-      <h1>Current temperature: <span id="temp"></span></h1>
-      <h1>Highs of: <span id="max-temp"></span></h1>
-      <h1>Lows of: <span id="min-temp"></span></h1>
-      <h2 id="current-temp"></h2>
-      <p>
-        <button id="temp-up">+</button>
-        <button id="temp-down">-</button>
-        <button id="reset">reset</button>
-        power-saving-mode is <span id="power-saving">on</span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
-      </p>  
-    </section>
+
+    <body>
+      <header>
+        <h1>London: <span id="temp"></span>&#xb0;</h2>
+        <h3>Highs of: <span id="max-temp"></span>&#xb0;   Lows of: <span id="min-temp"></span>&#xb0;</h3>
+      </header>
+      
+      <article>
+      <h1><span id="current-temp"></span>&#xb0;</h1>
+        <p>
+          <button id="temp-up"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-caret-up-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+          </svg></button>
+          <button id="temp-down"><svg width="1.5em" height="1.5em" viewBox="0 0 17 14" class="bi bi-caret-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg></button><br>
+
+          <h4>power-saving-mode is <span id="power-saving">on</span></h4>
+          <h3><button id="powersaving-on">PSM on</button>
+          <button id="powersaving-off">PSM off</button><br></h3>
+          <button id="reset"><svg width="1.5em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-counterclockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+          </svg></button>
+        </p>  
+    </article>
+    </body>
+
     <script src="src/thermostat.js"></script>
     <script src="src/interface.js"></script>
-  </body>
 </html>
+<i class="fas fa-angle-double-up"></i>
