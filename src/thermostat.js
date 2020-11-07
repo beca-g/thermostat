@@ -2,11 +2,14 @@
 
 class Thermostat {
     constructor() {
+      this.DEFAULT_TEMPERATURE = 20;
+      this.temperature = this.DEFAULT_TEMPERATURE;
+      this.MIN_TEMP = 10;
       this.MAX_LIMIT_PSM_ON = 25;
       this.MAX_LIMIT_PSM_OFF = 32;
-      this.MIN_TEMP = 10;
-      this.temperature = 20;
       this.powerSavingMode = true;
+      this.MEDIUM_ENERGY_USAGE_LIMIT = 18;
+      this.HIGH_ENERGY_USAGE_LIMIT = 25;
     }
 
     currentTemp() {
@@ -51,7 +54,7 @@ class Thermostat {
     }
 
     reset() {
-      this.temperature = 20;
+      this.temperature = this.DEFAULT_TEMPERATURE;
     };
 
     energyUsage() {
